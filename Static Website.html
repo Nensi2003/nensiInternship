@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Painful Pleasures</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="#Home">WholeSame-Pros Only</a>
+                <a href="#Retail">Retail</a>
+
+                <input type="text" name="text" required >
+                <input type="submit" name="search" value="Search" >
+                
+                <a href="#Community">Community</a>
+                <a href="#Contact">Contact</a>
+                <div class="dropdown">
+                    <a href="#">Account</a>
+                    <div class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="#">Log out</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <br>
+
+        <ul class="options">
+            <li><div class="dropdown">
+              <button class="dropbtn">Body Jewelry</button>
+              <div class="dropdown-content">
+                <a href="#">Example1</a>
+                <a href="#">Example2</a>
+              </div>
+            </div></li>
+            <li><div class="dropdown">
+              <button class="dropbtn">Piercing</button>
+              <div class="dropdown-content">
+                <a href="#">Example1</a>
+                <a href="#">Example2</a>
+              </div>
+            </div></li>
+            <li><div class="dropdown">
+              <button class="dropbtn">Tatoo</button>
+              <div class="dropdown-content">
+                <a href="#">Example1</a>
+                <a href="#">Example2</a>
+              </div>
+            </div></li>
+            <li><div class="dropdown">
+              <button class="dropbtn">Medical</button>
+              <div class="dropdown-content">
+                <a href="#">Example1</a>
+                <a href="#">Example2</a>
+              </div>
+            </div></li>
+            <li><div class="dropdown">
+              <button class="dropbtn">Studio</button>
+              <div class="dropdown-content">
+                <a href="#">Example1</a>
+                <a href="#">Example2</a>
+              </div>
+            </div></li>
+            <li><div class="dropdown">
+              <button class="dropbtn">Permanent Makeup</button>
+              <div class="dropdown-content">
+                <a href="#">Example1</a>
+                <a href="#">Example2</a>
+              </div>
+            </div></li>
+        </ul> <hr>
+
+        <div id="Home" class="top">
+            <div class="grid-container">
+                <div class="grid-img1"><img src="./dummy_600x400_ffffff_cccccc.png"></div>
+                <div class="grid-img2"><img src="./dummy_300x200_ffffff_cccccc.png"></div>
+                <div class="grid-img3"><img src="./dummy_300x200_ffffff_cccccc.png"></div>
+            </div> <br><br>
+
+            <div class="flexbox-container">
+                <div class="item">
+                    <h1>Tatoo Supplies</h1>
+                    <img src="./dummy_80x100_ffffff_cccccc.png">
+                    <button type="button">Shop Now</button>
+                </div>
+
+                <div class="item">
+                    <h1>Body Jewelry</h1>
+                    <img src="./dummy_80x100_ffffff_cccccc.png">
+                    <button type="button">Shop Now</button>
+                </div>
+
+                <div class="item">
+                    <h1>Piercing Supplies</h1>
+                    <img src="./dummy_80x100_ffffff_cccccc.png">
+                    <button type="button">Shop Now</button>
+                </div>
+
+                <div class="item">
+                    <h1>Medical Supplies</h1>
+                    <img src="./dummy_80x100_ffffff_cccccc.png">
+                    <button type="button">Shop Now</button>
+                </div>
+
+                <div class="item">
+                    <h1>Permanent MakeUp</h1>
+                    <img src="./dummy_80x100_ffffff_cccccc.png">
+                    <button type="button">Shop Now</button>
+                </div>
+            </div>
+        </div> <br> <hr>
+        
+        <h5 style="text-align: center; font-size: larger;">NEW PRODUCTS</h5>
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="product">
+                    <img src="./dummy_80x100_ffffff_cccccc.png">
+                    <p>Product 1</p>
+                </div>
+                <div class="product">
+                    <img src="./dummy_80x100_ffffff_cccccc.png">
+                    <p>Product 2</p>
+                </div>
+                <div class="product">
+                    <img src="./dummy_80x100_ffffff_cccccc.png">
+                    <p>Product 3</p>
+                </div>
+                <div class="product">
+                    <img src="./dummy_80x100_ffffff_cccccc.png">
+                    <p>Product 4</p>
+                </div>
+                <div class="product">
+                    <img src="./dummy_80x100_ffffff_cccccc.png">
+                    <p>Product 5</p>
+                </div>
+            </div>
+            <button class="prev-button">&lt;</button>
+            <button class="next-button">&gt;</button>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const container = document.querySelector(".carousel-container");
+    const prevBtn = document.querySelector(".prev-button");
+    const nextBtn = document.querySelector(".next-button");
+    const products = document.querySelectorAll(".product");
+    let productDisplayed = 0;
+
+    function prevProducts() {
+        productDisplayed = Math.max(productDisplayed - 1, 0);
+        updateCarousel();
+    }
+
+    function nextProducts() {
+        productDisplayed = Math.min(productDisplayed + 1, products.length - 3);
+        updateCarousel();
+    }
+
+    function updateCarousel() {
+        container.style.transform = `translateX(-${productDisplayed * 33.33}%)`;
+    }
+
+    prevBtn.addEventListener("click", prevProducts);
+    nextBtn.addEventListener("click", nextProducts);
+});
+</script>
+        </div> <br><br>
+
+        <footer>
+
+            <div class="footer-element">
+                <h3>HELPFUL LINKS</h3>
+                <a href="#">Contact Us</a>
+                <a href="#">Support</a>
+                <a href="#">About</a>
+                <a href="#">Accessibility Statement</a>
+            </div>
+
+            <div class="footer-element">
+                <h3>SHOPPING</h3>
+                <a href="#">Reviews</a>
+                <a href="#">Returns</a>
+                <a href="#">Shipping</a>
+            </div>
+
+            <div class="footer-element">
+                <h3>GET IN TOUCH</h3>
+                &#9742;<p>068 401 0208</p>
+                &#128231;<a href="#">support@painfulpleasures.com</a>
+            </div>
+        </footer>
+    </body>
+</html>
